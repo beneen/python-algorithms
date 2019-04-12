@@ -1,21 +1,3 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-
-
-#
-# Complete the 'largestPiece' function below.
-#
-# The function is expected to return a STRING.
-# The function accepts following parameters:
-#  1. INTEGER_ARRAY radii
-#  2. INTEGER numberOfGuests
-#
 
 def check_midpoint(midpoint, areas, number_of_guests):
     sum = 0
@@ -57,10 +39,6 @@ def largest_piece(radii, number_of_guests):
         k = binary_search(sorted(areas), number_of_guests, largest_area)
     return k
 
-
-    # first intermediate solution - dividing the largest cake among all people
-
-
     #segments_larger_than_max_radius = [elem for elem in remainder if largest_area / float(numberOfGuests) < elem]
 def main():
     radii_count = int(input("how many cakes").strip())
@@ -77,47 +55,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-# #!/bin/python3
-#
-# import math
-# import os
-# import random
-# import re
-# import sys
-#
-#
-#
-# #
-# # Complete the 'largestPiece' function below.
-# #
-# # The function is expected to return a STRING.
-# # The function accepts following parameters:
-# #  1. INTEGER_ARRAY radii
-# #  2. INTEGER numberOfGuests
-# #
-#
-# def largestPiece(radii, numberOfGuests):
-#
-#
-# if __name__ == '__main__':
-#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
-#
-#     radii_count = int(input().strip())
-#
-#     radii = []
-#
-#     for _ in range(radii_count):
-#         radii_item = int(input().strip())
-#         radii.append(radii_item)
-#
-#     numberOfGuests = int(input().strip())
-#
-#     result = largestPiece(radii, numberOfGuests)
-#
-#     fptr.write(result + '\n')
-#
-#     fptr.close()
