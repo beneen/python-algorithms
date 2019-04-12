@@ -12,8 +12,8 @@ def main():
     array = []
 
     for _ in range(array_user_input):
-        happy_item = int(input().strip())
-        array.append(happy_item)
+        item = int(input().strip())
+        array.append(item)
 
     print(minumum_number(limit, array))
 
