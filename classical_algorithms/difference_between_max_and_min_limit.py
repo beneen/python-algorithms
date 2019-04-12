@@ -3,7 +3,6 @@ import os
 
 def minumum_number(limit, array):
     sorted_array = sorted(array)
-
     if (sorted_array[-1] - sorted_array[0]) < limit:
         return len(sorted_array)
     backwards_array = sorted(array, reverse=True)
