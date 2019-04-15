@@ -1,3 +1,8 @@
+'''
+-----
+essentially the coin changing problem but mapping the output to the alphabet
+-----
+'''
 import string
 
 def subset_sum(numbers, target, partial=[], partial_sum=0):
