@@ -1,4 +1,4 @@
 # python-algorithms
 
 
-Sphere online judge problems in Python
+Classic algorithm problems in Python
