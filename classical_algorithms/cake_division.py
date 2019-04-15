@@ -24,22 +24,18 @@ def binary_search(areas, number_of_guests, largest_area):
     return mid_volume
 
 def largest_piece(radii, number_of_guests):
-    # Write your code here
-    # to calculate radii
     pi = 3.14159265359
     areas = sorted([elem * elem * pi for elem in radii])
     largest_area = max(sorted(areas))
     remainder = [x for x in areas if x != largest_area]
     segment = largest_area / float(number_of_guests)
     remainder = [elem for elem in remainder if elem > segment]
-    #areas_remove_lower_than_segment = [elem for elem in areas if elem > segment]
     if len(remainder) == 0:
         return segment
     else:
         k = binary_search(sorted(areas), number_of_guests, largest_area)
     return k
 
-    #segments_larger_than_max_radius = [elem for elem in remainder if largest_area / float(numberOfGuests) < elem]
 def main():
     radii_count = int(input("how many cakes").strip())
 
@@ -49,9 +45,9 @@ def main():
         radii_item = int(input("radius of cake").strip())
         radii.append(radii_item)
 
-    numberOfGuests = int(input("number of guests").strip())
+    number_of_guests = int(input("number of guests").strip())
 
-    print(largest_piece(radii, numberOfGuests))
+    print(largest_piece(radii, number_of_guests))
 
 if __name__ == '__main__':
     main()
